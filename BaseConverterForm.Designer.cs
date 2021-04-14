@@ -218,6 +218,7 @@
             this.Controls.Add(this.txtBinary);
             this.Controls.Add(this.txtDecimal);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "BaseConverterForm";
             this.Text = "Conversor de Bases";
             this.panel1.ResumeLayout(false);
