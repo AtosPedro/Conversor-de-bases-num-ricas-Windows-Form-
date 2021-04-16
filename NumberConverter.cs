@@ -13,14 +13,19 @@ namespace ConversorDeBases
             string binaryString = "";
             int auxNumber = Convert.ToInt32(decimalNumber);
 
+            //divide o número decimal e adiciona os 1s e 0s a variável 'binaryString' dependendo do resultado da operaçção
             while (auxNumber != 0)
             {
                 binaryString += auxNumber % 2 == 1 ? "1" : "0";
                 auxNumber = auxNumber / 2;
             }
+            //converte a variável 'binaryString' para um array de caracteres
             char[] binaryArray = binaryString.ToCharArray();
+            //inverte a ordem do array
             Array.Reverse(binaryArray);
+            //atribui um valor vazrio para a 'binaryString'
             binaryString = "";
+            //percorre o array e preenche a 'binaryString' na ordem correta
             foreach (char c in binaryArray)
                 binaryString += c;
 
@@ -28,8 +33,11 @@ namespace ConversorDeBases
         }
         public static string Hexadecimal (string decimalNumber)
         {
+            //array com todas as possibilidades de caracteres hexadecimais
             string[] hexNumbers = new string[] { "0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
+            
             string hexString = "";
+            //passa todos os caracteres decimais para maiúsculo
             decimalNumber = decimalNumber.ToUpper();
             int auxNumber = Convert.ToInt32(decimalNumber);
 
